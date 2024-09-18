@@ -3,97 +3,11 @@ Apache, MySQL and PHP v8.1
 
 Run These MySQL Queries to create the database:
 
-1-> CREATE DATABASE teacher_student_portal;
+1-> CREATE DATABASE teacher_student_portal; OR Do it manualy from any MySQL IDE
 
 
-2-> Export These queries given below
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Generation Time: Sep 18, 2024 at 01:16 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.1.25
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `teacher_student_portal`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `students`
---
-
-CREATE TABLE `students` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `subject` varchar(100) NOT NULL,
-  `mark` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `teachers`
---
-
-CREATE TABLE `teachers` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(155) NOT NULL,
-  `password` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `students`
---
-ALTER TABLE `students`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `teachers`
---
-ALTER TABLE `teachers`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `students`
---
-ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `teachers`
---
-ALTER TABLE `teachers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
+2-> Export the SQL file from path:
+  Backend/Config/teacher_student_portal.sql
 
 3-> Updated your server details:
   Backend/Config/Database.php
@@ -101,7 +15,6 @@ COMMIT;
     private $db_name = "your database name";
     private $db_user = "database user";
     private $db_pass = " database password";
-
 
 Now the project is ready to Run!
 on your browser open: your_localhost/StudentTeacherPortal/index.php
